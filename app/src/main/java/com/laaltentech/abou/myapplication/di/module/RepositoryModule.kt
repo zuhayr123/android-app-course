@@ -4,6 +4,8 @@ import androidx.paging.PagedList
 import com.laaltentech.abou.myapplication.di.WebService
 import com.laaltentech.abou.myapplication.game.data.GameDAO
 import com.laaltentech.abou.myapplication.game.repository.GameDataRepository
+import com.laaltentech.abou.myapplication.iot.data.IoTDAO
+import com.laaltentech.abou.myapplication.iot.repository.IoTRepository
 import com.laaltentech.abou.myapplication.util.AppExecutors
 import dagger.Module
 import dagger.Provides
@@ -20,4 +22,9 @@ class RepositoryModule {
         return GameDataRepository(webService = webservice, gameDAO = dao, appExecutors = executor)
     }
 
+    @Provides
+    @Singleton
+    fun provideIoTRepository(webservice: WebService, dao: IoTDAO, executor: AppExecutors): IoTRepository {
+        return IoTRepository(webService = webservice, iotDAO = dao, appExecutors = executor)
+    }
 }

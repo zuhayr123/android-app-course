@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".game.owner.activity.GameActivity">
+        <activity android:name=".iot.owner.activity.IoTActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <receiver android:name=".game.owner.alarmReceiver.AlarmReceiverFunctions"
-            android:enabled="true"
-            android:exported="true">
-        </receiver>
+        <activity android:name=".game.owner.activity.GameActivity" />
 
     </application>
-
 </manifest>

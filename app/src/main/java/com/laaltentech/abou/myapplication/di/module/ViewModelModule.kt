@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.laaltentech.abou.myapplication.di.ViewModelKey
 import com.laaltentech.abou.myapplication.factory.AppModelFactory
 import com.laaltentech.abou.myapplication.game.observer.GameDataViewModel
+import com.laaltentech.abou.myapplication.iot.observer.IoTMainViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -18,6 +19,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(GameDataViewModel::class)
     abstract fun bindGameDataViewModel(newGameDataViewModel: GameDataViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(IoTMainViewModel::class)
+    abstract fun bindIoTMainViewModel(newIoTMainViewModel: IoTMainViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: AppModelFactory): ViewModelProvider.Factory

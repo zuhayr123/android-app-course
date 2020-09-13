@@ -33,7 +33,7 @@ class GameDataRepository@Inject constructor(
             }
 
             override fun createCall(): LiveData<ApiResponse<GameDataResponse>> {
-                return webService.insertGameData(gameData = data, url = URL_HUB.INSERT_GAME_DATA)
+                return webService.insertGameData(gameData = data, url = URL_HUB.BASE_URL)
             }
 
             override fun uploadTag(): String? = null

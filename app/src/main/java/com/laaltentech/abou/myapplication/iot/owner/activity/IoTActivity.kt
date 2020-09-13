@@ -1,4 +1,4 @@
-package com.laaltentech.abou.myapplication.game.owner.activity
+package com.laaltentech.abou.myapplication.iot.owner.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,8 +10,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject
 
-
-class GameActivity : AppCompatActivity(), HasSupportFragmentInjector {
+class IoTActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
