@@ -44,16 +44,50 @@ class IoTFragment : Fragment(), Injectable {
         viewModelInit()
         newIoTMainViewModel.apiCall.value = "available"
 
-        binding.toggle.setOnCheckedChangeListener { _, isChecked ->
+        binding.blueSwitch.setOnCheckedChangeListener { _, isChecked ->
 
 
 
             if (isChecked){
-                newIoTMainViewModel.ioTDataTable.state = "01"
+                newIoTMainViewModel.ioTDataTable.blueSwitch = "01"
             }
 
             else{
-                newIoTMainViewModel.ioTDataTable.state = "00"
+                newIoTMainViewModel.ioTDataTable.blueSwitch = "00"
+            }
+
+            newIoTMainViewModel.apiCall.value = "available"
+
+
+        }
+
+        binding.redSwitch.setOnCheckedChangeListener { _, isChecked ->
+
+
+
+            if (isChecked){
+                newIoTMainViewModel.ioTDataTable.redSwitch = "01"
+            }
+
+            else{
+                newIoTMainViewModel.ioTDataTable.redSwitch = "00"
+            }
+
+            newIoTMainViewModel.apiCall.value = "available"
+
+
+        }
+
+        binding.greenSwitch.setOnCheckedChangeListener { _, isChecked ->
+
+
+
+            if (isChecked){
+                newIoTMainViewModel.ioTDataTable.greenSwitch = "01"
+            }
+
+            else{
+                newIoTMainViewModel.ioTDataTable.greenSwitch = "00"
             }
 
             newIoTMainViewModel.apiCall.value = "available"

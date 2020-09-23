@@ -13,4 +13,5 @@ interface WebService {
     fun updateIotState(@Url url: String,
                         @Query("timeStamp") timeStamp : String,
                         @Body data: IoTDataTable): LiveData<ApiResponse<IoTDataResponse>>
+
 }

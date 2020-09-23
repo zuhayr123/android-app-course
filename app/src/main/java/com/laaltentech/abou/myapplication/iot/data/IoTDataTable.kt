@@ -9,8 +9,14 @@ class IoTDataTable{
     @PrimaryKey(autoGenerate = true)
     var pKey : Int? = 0
 
-    @SerializedName("switchState")
-    var state: String? = "00"
+    @SerializedName("redSwitch")
+    var redSwitch: String? = "00"
+
+    @SerializedName("greenSwitch")
+    var greenSwitch: String? = "00"
+
+    @SerializedName("blueSwitch")
+    var blueSwitch: String? = "00"
 
     @SerializedName("timeStamp")
     var timestamp: String? = "123"

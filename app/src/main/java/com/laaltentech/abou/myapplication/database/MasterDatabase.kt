@@ -9,7 +9,7 @@ import com.laaltentech.abou.myapplication.iot.data.IoTDataTable
 @Database(entities =
 [
     (IoTDataTable::class)
-], version = 3, exportSchema = false)
+], version = 4, exportSchema = false)
 
 @TypeConverters(DateConverter::class)
 
